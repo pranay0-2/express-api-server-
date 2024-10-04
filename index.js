@@ -5,6 +5,7 @@ const app = express()
 const port = 3000
 
 const githubData = {"Login" : "pranay"};
+const youtube = {"signIn" : "prapti"};
 
 app.get('/', (req , res) =>{
     res.send('Hello World')
@@ -15,7 +16,10 @@ app.get('/login', (req , res) =>{
 })
 
 app.get('/github' , (req,res) =>{
-    res.send(githubData)
+    res.json(githubData)
+})
+app.get('/youtube' , (req,res) =>{
+    res.json(youtube)
 })
 
 app.listen(port, () =>{
